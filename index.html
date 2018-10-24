@@ -84,7 +84,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -103,10 +103,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Entradas',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categorias',
-            TAGS: 'Etiquetas',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -137,7 +137,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
     </div>
 
                 </td>
@@ -157,16 +157,16 @@
             <h2 id="name">王子豪</h2>
             <h3 id="title">一个迷茫的追光者</h3>
             <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>Zhengzhou, China</span>
-            <a id="follow" target="_blank" href="https://github.com/zzufire/">SEGUIR</a>
+            <a id="follow" target="_blank" href="https://github.com/zzufire/">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                2
-                <span>Entradas</span>
+                1
+                <span>post</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>Etiqueta</span>
+                <span>tag</span>
             </div>
         </div>
         
@@ -214,140 +214,6 @@
 
             
             <section id="main">
-    <article id="post-ROS学习笔记" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/10/22/ROS学习笔记/">ROS学习整合</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/10/22/ROS学习笔记/">
-            <time datetime="2018-10-22T10:55:20.000Z" itemprop="datePublished">2018-10-22</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p><img src="https://zzufire.github.io/css/images/9.jpg" alt="每一个奋斗的日子都不应辜负" title="你发现了了不起的秘密………"></p>
-<h2 id="ROS学习流程"><a href="#ROS学习流程" class="headerlink" title="ROS学习流程"></a>ROS学习流程</h2><hr>
-<ul>
-<li><p>Linux shell基本命令掌握</p>
-</li>
-<li><p>ROS环境安装</p>
-</li>
-<li><a href="http://wiki.ros.org/cn" target="_blank" rel="noopener">ROSwiki</a>基础教程学习</li>
-<li>ROS视频教程学习（回顾基础必不可少）</li>
-<li>ROS使用工具学习</li>
-<li>篮球机器人实战</li>
-</ul>
-<h3 id="Linux-shell基本命令掌握"><a href="#Linux-shell基本命令掌握" class="headerlink" title="Linux shell基本命令掌握"></a>Linux shell基本命令掌握</h3><pre><code>****
-</code></pre><h3 id="ROS环境安装"><a href="#ROS环境安装" class="headerlink" title="ROS环境安装"></a>ROS环境安装</h3><pre><code>学习核心教程即可
-![](https://zzufire.github.io/css/images/9.jpg &apos;描述&apos;)
-</code></pre>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://zzufire.github.io/2018/10/22/ROS学习笔记/" data-id="cjnmyf9ke0000okwsp74epdy8" class="article-share-link"><i class="fas fa-share"></i>Compartir</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
@@ -400,7 +266,7 @@
 
 </div>
 
-    <a data-url="http://zzufire.github.io/2018/10/19/hello-world/" data-id="cjnmyf9rq0001okwsctssa1k0" class="article-share-link"><i class="fas fa-share"></i>Compartir</a>
+    <a data-url="http://zzufire.github.io/2018/10/19/hello-world/" data-id="cjnmytopx0000m8wsraer3qoy" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -482,28 +348,9 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Recientes</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/10/22/ROS学习笔记/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://zzufire.github.io/css/images/9.jpg)" alt="ROS学习整合" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/10/22/ROS学习笔记/" class="title">ROS学习整合</a></p>
-                            <p class="item-date"><time datetime="2018-10-22T10:55:20.000Z" itemprop="datePublished">2018-10-22</time></p>
-                        </div>
-                    </li>
                 
                     <li>
                         
@@ -533,9 +380,9 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Archivos</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -546,7 +393,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">Links</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 
