@@ -11,11 +11,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="ZzuFire,"> 
-    <meta name="description" content="WZH��s BLOG,安装usb_cam
-cd catkin_ws/src
-git clone https://github.com/bosch-ros-pkg/usb_cam.git
-cd ..
-catkin_make,"> 
+    <meta name="description" content="WZH��s BLOG,
+安装usb_cam1234567cd catkin_ws/srcgit clone https://github.com/bosch-ros-pkg/usb_cam.gitcd ..catkin_,"> 
     <meta name="author" content="Zihao Wang"> 
     <link rel="alternative" href="atom.xml" title="SlowFire" type="application/atom+xml"> 
     <link rel="icon" href="/img/yezi.jpg"> 
@@ -30,7 +27,7 @@ catkin_make,">
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">ROS学习整合</h3>
+    <h3 class="subtitle">ROS下使用usb_cam摄像头</h3>
     <div class="social">
         <div class="like-icon">
             <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>
@@ -47,21 +44,19 @@ catkin_make,">
     <div class="section">
         <div class="article">
     <div class="main">
-        <h1 class="title">ROS学习整合</h1>
+        <h1 class="title">ROS下使用usb_cam摄像头</h1>
         <div class="stuff">
             <span>十二月 09, 2018</span>
             
 
         </div>
         <div class="content markdown">
-            <p>安装usb_cam</p>
-<p>cd catkin_ws/src</p>
-<p>git clone <a href="https://github.com/bosch-ros-pkg/usb_cam.git" target="_blank" rel="noopener">https://github.com/bosch-ros-pkg/usb_cam.git</a></p>
-<p>cd ..</p>
-<p>catkin_make</p>
-<p>判断设备代码<br>cd /dev &amp;&amp;find . -name “video*”</p>
-<p>确定自己的摄像头是viedo0还是viedo1还是…<br>2.2 读取图像<br>修改usb_cam 包中，launch文件夹下usb_cam-test.launch<br>设备name修改成相应的设备号</p>
-<p>roslaunch usb_cam usb_cam-test.launch</p>
+            <p><img src="https://zzufire.github.io/img/12.jpeg" alt="每一个奋斗的日子都不应辜负" title="你发现了了不起的秘密………"></p>
+<h3 id="安装usb-cam"><a href="#安装usb-cam" class="headerlink" title="安装usb_cam"></a>安装usb_cam</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> catkin_ws/src</span><br><span class="line"></span><br><span class="line">git clone https:<span class="string">//github.com/bosch-ros-pkg/usb_cam.git</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cd</span> <span class="string">..</span></span><br><span class="line"></span><br><span class="line">catkin_make</span><br></pre></td></tr></table></figure>
+<p>判断设备代码<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">/dev</span> &amp;&amp;find . -name <span class="string">"video*"</span></span><br></pre></td></tr></table></figure></p>
+<p>确定自己的摄像头是viedo0还是viedo1还是…</p>
+<p>2.2 读取图像</p>
+<p>修改usb_cam 包中，launch文件夹下usb_cam-test.launch<br>设备name修改成相应的设备号<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">roslaunch usb_cam usb_cam-test.<span class="built_in">launch</span></span><br></pre></td></tr></table></figure></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
