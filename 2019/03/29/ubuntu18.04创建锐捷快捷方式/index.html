@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="" class="loading">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SlowFire</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="ZzuFire,"> 
+    <meta name="description" content="WZH��s BLOG,
+在ubuntu18.04中创建锐捷客户端快捷方式最近刚在电脑上重装了ubuntu18.04的系统，在寝室不想来回输入无线网的密码，于是决定使用有线网即锐捷客户端，下载安装包后解压，发现没有快捷方式,"> 
+    <meta name="author" content="Zihao Wang"> 
+    <link rel="alternative" href="atom.xml" title="SlowFire" type="application/atom+xml"> 
+    <link rel="icon" href="/img/yezi.jpg"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+</head>
+</html>
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single" style="min-height: 626px;">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">在ubuntu18.04中创建锐捷客户端快捷方式</h3>
+    <div class="social">
+        <div class="like-icon">
+            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>
+        </div>
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">在ubuntu18.04中创建锐捷客户端快捷方式</h1>
+        <div class="stuff">
+            <span>三月 29, 2019</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <p><img src="https://zzufire.github.io/img/18.jpg" alt="每一个奋斗的日子都不应辜负" title="你发现了了不起的秘密………"></p>
+<h2 id="在ubuntu18-04中创建锐捷客户端快捷方式"><a href="#在ubuntu18-04中创建锐捷客户端快捷方式" class="headerlink" title="在ubuntu18.04中创建锐捷客户端快捷方式"></a>在ubuntu18.04中创建锐捷客户端快捷方式</h2><p>最近刚在电脑上重装了ubuntu18.04的系统，在寝室不想来回输入无线网的密码，于是决定使用有线网即锐捷客户端，下载安装包后解压，发现没有快捷方式，于是自己就写了一个，方便自己用。</p>
+<p>#<br>首先登陆郑大官网软件大全中下载锐捷ubuntu版压缩包，解压安装包后观察文件夹内容，我是解压到/home/Download中<br>    <img src="https://zzufire.github.io/img/ubuntu101.jpg" alt=""></p>
+<p>创建文件 rj.sh用于打开rjsupplicant.sh观察脚本内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># Program:</span></span><br><span class="line"><span class="comment">#  date  2018/05/31</span></span><br><span class="line"><span class="comment"># release2</span></span><br><span class="line"><span class="comment"># History  2018/05/31</span></span><br><span class="line"><span class="comment"># author  Tangcuyu</span></span><br><span class="line"><span class="comment"># email  zzuer@live.com</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">read</span> -p <span class="string">"请输入网卡名称:                "</span>       network_card_name</span><br><span class="line"><span class="built_in">read</span> -p <span class="string">"请输入用户名:          "</span>               username</span><br><span class="line"><span class="built_in">read</span> -p <span class="string">"请输入认证密码:                "</span>       password</span><br><span class="line"><span class="comment"># 认证选项 有线认证 静态ip 自设网卡 </span></span><br><span class="line">sudo ./rjsupplicant.sh -a 1 -d 0 -n <span class="variable">$&#123;network_card_name&#125;</span>  -u <span class="variable">$&#123;username&#125;</span> -p <span class="variable">$&#123;password&#125;</span> -S 1 </span><br><span class="line">sudo NetworkManager restart</span><br><span class="line">sleep 1m</span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+<p>在无线网络中配置自己的静态IP，配置完成后就可以运行了，先进入脚本文件的目录，之后终端输入命令<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="string">./rj.sh</span></span><br></pre></td></tr></table></figure></p>
+<p>输入自己的网卡和账号密码等信息，就可以使用了。后期可以直接更改rj.sh文件中的内容，更改成自己的网卡和账号。就不用每次打开在终端中输入了。</p>
+<p>终端运行对于终极懒癌的我，仍然不满足，于是创建快捷方式！首先进入存放系统菜单可执行文件的目录，一般存放在/usr/share/applications中，在该文件夹中打开终端，创建新的desktop文件。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">gedit</span> <span class="selector-tag">rj</span><span class="selector-class">.desktop</span></span><br></pre></td></tr></table></figure></p>
+<p>打开后写入以下代码<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Desktop Entry]</span></span><br><span class="line"><span class="attr">Encoding</span>=UTF-<span class="number">8</span></span><br><span class="line"><span class="attr">Type</span>=Application</span><br><span class="line"><span class="attr">X-Created-By</span>=</span><br><span class="line"><span class="attr">Categories</span>=</span><br><span class="line"><span class="attr">Icon</span>=deepin.com.qq.im</span><br><span class="line"><span class="attr">Exec</span>=sudo /home/wzh/Download/rjsupplicant/rj.sh</span><br><span class="line"><span class="attr">Name</span>=锐捷</span><br><span class="line"><span class="attr">StartupNotify</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">Terminal</span>=<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>Exec= 执行代码命令  Icon=应用程序的图标（因为没有图标就先借用的qq的。。。）<br>X-Created-By=，Categories=可填可不填   </p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="http://zzufire.github.io/music/신승훈 - I Believe.mp3">
+            </audio>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link" data-ae="true" data-ci="1005189f6279a5563473" data-cs="4e1f10454a5c09dccdcdf181c4b99b5a6d9a29bc" data-r="zzufire.github.io" data-o="zzufire" data-a="zzufire" data-d="false">查看评论</div>
+
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</html>
