@@ -12,7 +12,8 @@
     <meta name="google" content="notranslate">
     <meta name="keywords" content="ZzuFire,"> 
     <meta name="description" content="WZH��s BLOG,
-在ubuntu18.04中创建锐捷客户端快捷方式最近刚在电脑上重装了ubuntu18.04的系统，在寝室不想来回输入无线网的密码，于是决定使用有线网即锐捷客户端，下载安装包后解压，发现没有快捷方式,"> 
+最近刚在电脑上重装了ubuntu18.04的系统，在寝室不想来回输入无线网的密码，于是决定使用有线网即锐捷客户端，下载安装包后解压，发现没有快捷方式，于是自己就写了一个，方便自己用。
+#首先登陆郑,"> 
     <meta name="author" content="Zihao Wang"> 
     <link rel="alternative" href="atom.xml" title="SlowFire" type="application/atom+xml"> 
     <link rel="icon" href="/img/yezi.jpg"> 
@@ -52,8 +53,8 @@
         </div>
         <div class="content markdown">
             <p><img src="https://zzufire.github.io/img/18.jpg" alt="每一个奋斗的日子都不应辜负" title="你发现了了不起的秘密………"></p>
-<h2 id="在ubuntu18-04中创建锐捷客户端快捷方式"><a href="#在ubuntu18-04中创建锐捷客户端快捷方式" class="headerlink" title="在ubuntu18.04中创建锐捷客户端快捷方式"></a>在ubuntu18.04中创建锐捷客户端快捷方式</h2><p>最近刚在电脑上重装了ubuntu18.04的系统，在寝室不想来回输入无线网的密码，于是决定使用有线网即锐捷客户端，下载安装包后解压，发现没有快捷方式，于是自己就写了一个，方便自己用。</p>
-<p>#<br>首先登陆郑大官网软件大全中下载锐捷ubuntu版压缩包，解压安装包后观察文件夹内容，我是解压到/home/Download中<br>    <img src="https://zzufire.github.io/img/ubuntu101.jpg" alt=""></p>
+<pre><code>最近刚在电脑上重装了ubuntu18.04的系统，在寝室不想来回输入无线网的密码，于是决定使用有线网即锐捷客户端，下载安装包后解压，发现没有快捷方式，于是自己就写了一个，方便自己用。
+</code></pre><p>#<br>首先登陆郑大官网软件大全中下载锐捷ubuntu版压缩包，解压安装包后观察文件夹内容，我是解压到/home/Download中<br>    <img src="https://zzufire.github.io/img/ubuntu101.png" alt="wd" title="1"></p>
 <p>创建文件 rj.sh用于打开rjsupplicant.sh观察脚本内容</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># Program:</span></span><br><span class="line"><span class="comment">#  date  2018/05/31</span></span><br><span class="line"><span class="comment"># release2</span></span><br><span class="line"><span class="comment"># History  2018/05/31</span></span><br><span class="line"><span class="comment"># author  Tangcuyu</span></span><br><span class="line"><span class="comment"># email  zzuer@live.com</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">read</span> -p <span class="string">"请输入网卡名称:                "</span>       network_card_name</span><br><span class="line"><span class="built_in">read</span> -p <span class="string">"请输入用户名:          "</span>               username</span><br><span class="line"><span class="built_in">read</span> -p <span class="string">"请输入认证密码:                "</span>       password</span><br><span class="line"><span class="comment"># 认证选项 有线认证 静态ip 自设网卡 </span></span><br><span class="line">sudo ./rjsupplicant.sh -a 1 -d 0 -n <span class="variable">$&#123;network_card_name&#125;</span>  -u <span class="variable">$&#123;username&#125;</span> -p <span class="variable">$&#123;password&#125;</span> -S 1 </span><br><span class="line">sudo NetworkManager restart</span><br><span class="line">sleep 1m</span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
 <p>在无线网络中配置自己的静态IP，配置完成后就可以运行了，先进入脚本文件的目录，之后终端输入命令<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="string">./rj.sh</span></span><br></pre></td></tr></table></figure></p>
