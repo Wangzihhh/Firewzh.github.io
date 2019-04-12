@@ -5,26 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SlowFire</title>
-
+    <title>在ubuntu18.04中创建锐捷客户端快捷方式 - SlowFire</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
-    <meta name="keywords" content="ZzuFire,"> 
-    <meta name="description" content="WZH��s BLOG,"> 
+    <meta name="keywords" content="ZzuWild,"> 
+    <meta name="description" content="WZH��s BLOG,
+最近刚在电脑上重装了ubuntu18.04的系统，在寝室不想来回输入无线网的密码，于是决定使用有线网即锐捷客户端，下载安装包后解压，发现没有快捷方式，于是自己就写了一个，方便自己用。
+#首先登陆郑,"> 
     <meta name="author" content="Zihao Wang"> 
     <link rel="alternative" href="atom.xml" title="SlowFire" type="application/atom+xml"> 
     <link rel="icon" href="/img/yezi.jpg"> 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
 </head>
 </html>
 <body class="loading">
+    <span id="config-title" style="display:none">SlowFire</span>
     <div id="loader"></div>
     <div id="single">
     <div id="top" style="display: block;">
     <div class="bar" style="width: 0;"></div>
-    <a class="icon-home image-icon" href="javascript:;"></a>
+    <a class="icon-home image-icon" href="javascript:;" data-url="http://zzufire.github.io"></a>
     <div title="播放/暂停" class="icon-play"></div>
     <h3 class="subtitle">在ubuntu18.04中创建锐捷客户端快捷方式</h3>
     <div class="social">
@@ -40,6 +51,7 @@
     </div>
     <div class="scrollbar"></div>
 </div>
+
     <div class="section">
         <div class="article">
     <div class="main">
@@ -64,13 +76,14 @@
 <p>Exec= 执行代码命令  Icon=应用程序的图标（因为没有图标就先借用的qq的。。。）<br>X-Created-By=，Categories=可填可不填   </p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
                 <source type="audio/mpeg" src="http://zzufire.github.io/music/신승훈 - I Believe.mp3">
             </audio>
             
         </div>
         
-    <div id="gitalk-container" class="comment link" data-ae="false" data-ci="1005189f6279a5563473" data-cs="4e1f10454a5c09dccdcdf181c4b99b5a6d9a29bc" data-r="zzufire。github.io" data-o="zzufire" data-a="zzufire" data-d="false">查看评论</div>
+    <div id="gitalk-container" class="comment link" data-ae="true" data-ci="1005189f6279a5563473" data-cs="4e1f10454a5c09dccdcdf181c4b99b5a6d9a29bc" data-r="zzufire.github.io" data-o="zzufire" data-a="zzufire" data-d="false">查看评论</div>
+
 
     </div>
     
@@ -80,7 +93,6 @@
     </div>
 </div>
 </body>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
 <script src="/js/plugin.js"></script>
@@ -137,7 +149,6 @@
         </div>
     </div>
 </div>
-
 
 
 
