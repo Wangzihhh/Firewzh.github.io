@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>在hexo主题博客中添加gitalk插件 - 看远方</title>
+    <title>前端|SVG可缩放矢量图形 - 看远方</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="ZzuWild,"> 
-    <meta name="description" content="WZH��s BLOG,添加gitalk评论插件写在前面……在建立自己的个人博客过程中，对评论系统十分好奇，同时自己也是个js大白，HTML代码我也看不懂，因此不断分析hexo文件系统内容。网页编程采用的是 HTML + ,"> 
+    <meta name="description" content="WZH��s BLOG,SVG可缩放矢量图形http://www.w3school.com.cn/svg/index.asp  
+SVG 意为可缩放矢量图形（Scalable Vector Graphics）。  
+SVG,"> 
     <meta name="author" content="Zihao Wang"> 
     <link rel="alternative" href="atom.xml" title="看远方" type="application/atom+xml"> 
     <link rel="icon" href="/img/yezi.jpg"> 
@@ -35,7 +37,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;" data-url="http://zzuwild.top"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">在hexo主题博客中添加gitalk插件</h3>
+    <h3 class="subtitle">前端|SVG可缩放矢量图形</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -53,36 +55,21 @@
     <div class="section">
         <div class="article">
     <div class="main">
-        <h1 class="title">在hexo主题博客中添加gitalk插件</h1>
+        <h1 class="title">前端|SVG可缩放矢量图形</h1>
         <div class="stuff">
-            <span>十二月 08, 2018</span>
+            <span>五月 02, 2019</span>
             
-  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/博客/">博客</a></li></ul>
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/HTML/">HTML</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/前端/">前端</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <h1 id="添加gitalk评论插件"><a href="#添加gitalk评论插件" class="headerlink" title="添加gitalk评论插件"></a>添加gitalk评论插件</h1><h2 id="写在前面……"><a href="#写在前面……" class="headerlink" title="写在前面……"></a>写在前面……</h2><p>在建立自己的个人博客过程中，对评论系统十分好奇，同时自己也是个js大白，HTML代码我也看不懂，因此不断分析hexo文件系统内容。网页编程采用的是 HTML + CSS + JS 这样的组合，其中 HTML 是用来描述当前这个页面的结构，CSS 用来描述页面的样子，JS 通常是用来处理这个页面和用户的交互。</p>
-<p>总的主题文档如下</p>
-<p><img src="https://zzufire.github.io/img/201812091.png" alt="主题文档"></p>
-<p>layout文档</p>
-<p><img src="https://zzufire.github.io/img/201812092.png" alt="主题文档"></p>
-<p>_partial文档</p>
-<p><img src="https://zzufire.github.io/img/201812093.png" alt="主题文档"></p>
-<p>post文档</p>
-<h1 id=""><a href="#" class="headerlink" title=""></a><img src="https://zzufire.github.io/img/201812093.png" alt="主题文档"></h1><p>而gitalk插件的配置内容就在  gitalk.ejs中内部代码为</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.gitalk != undefined)&#123; %&gt;</span><br><span class="line">    &lt;div id=<span class="string">'gitalk-container'</span> <span class="class"><span class="keyword">class</span>="<span class="title">comment</span> <span class="title">link</span>"</span></span><br><span class="line">        <span class="keyword">data</span>-ae=<span class="string">'&lt;%=theme.gitalk.autoExpand%&gt;'</span></span><br><span class="line">        <span class="keyword">data</span>-ci=<span class="string">'&lt;%=theme.gitalk.clientID%&gt;'</span></span><br><span class="line">        <span class="keyword">data</span>-cs=<span class="string">'&lt;%=theme.gitalk.clientSecret%&gt;'</span></span><br><span class="line">        <span class="keyword">data</span>-r=<span class="string">'&lt;%=theme.gitalk.repo%&gt;'</span></span><br><span class="line">        <span class="keyword">data</span>-o=<span class="string">'&lt;%=theme.gitalk.owner%&gt;'</span></span><br><span class="line">        <span class="keyword">data</span>-a=<span class="string">'&lt;%=theme.gitalk.admin%&gt;'</span></span><br><span class="line">        <span class="keyword">data</span>-d=<span class="string">'&lt;%=theme.gitalk.distractionFreeMode%&gt;'</span></span><br><span class="line">    &gt;查看评论&lt;/div&gt;</span><br><span class="line">&lt;%&#125;%&gt;</span><br></pre></td></tr></table></figure>
-<p>在_config.yml中设置的内容为<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">    <span class="comment"># 是否自动展开评论框</span></span><br><span class="line"><span class="attr">    autoExpand:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># 应用编号</span></span><br><span class="line"><span class="attr">    clientID:</span> <span class="string">''</span>     </span><br><span class="line">    <span class="comment"># 应用秘钥</span></span><br><span class="line"><span class="attr">    clientSecret:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># issue仓库名    填写你的仓库名</span></span><br><span class="line"><span class="attr">    repo:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># Github名</span></span><br><span class="line"><span class="attr">    owner:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># Github名</span></span><br><span class="line"><span class="attr">    admin:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># Ensure uniqueness and length less than 50</span></span><br><span class="line"><span class="attr">    id:</span> <span class="string">location.pathname</span></span><br><span class="line">    <span class="comment"># Facebook-like distraction free mode</span></span><br><span class="line"><span class="attr">    distractionFreeMode:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
-<p>所谓应用编号和密钥是在github中setting中获取应用，填写好信息后，会生成编号和密钥</p>
-<p>想要gitalk，需要申请<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">GitHub Application</a>。</p>
-<p>Application name填入喜欢的应用名称。</p>
-<p>Homepage URL填入域名。</p>
-<p>Application description填入应用的描述。</p>
-<p>Authorization callback URL 填入域名。</p>
-<p>然后，Register application，转到应用页面。在该页面，可以看到Client ID和Client Secret。</p>
-<p>将_config.yml文件内容填写完后，并不能出现文章下方的评论，原因是需要设置issue的仓库</p>
-<p><img src="https://zzufire.github.io/img/201812096.png" alt="主题文档"><br><img src="https://zzufire.github.io/img/201812095.png" alt="主题文档"></p>
-<p>中间出现了一些问题，比如gitalk会出现  error:Not found这样的错误，这种问题网上没有解决方法，可能是太容易了，只要按照步骤配置，把各个接口配置正确就没有问题。</p>
+            <h3 id="SVG可缩放矢量图形"><a href="#SVG可缩放矢量图形" class="headerlink" title="SVG可缩放矢量图形"></a>SVG可缩放矢量图形</h3><p><a href="http://www.w3school.com.cn/svg/index.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/svg/index.asp</a>  </p>
+<p>SVG 意为可缩放矢量图形（Scalable Vector Graphics）。  </p>
+<p>SVG 使用 XML 格式定义图像。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"vibrant"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">svg</span> <span class="attr">viewBox</span>=<span class="string">"0 0 2880 1620"</span> <span class="attr">height</span>=<span class="string">"100%"</span> <span class="attr">preserveAspectRatio</span>=<span class="string">"xMaxYMax slice"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">polygon</span> <span class="attr">opacity</span>=<span class="string">"0.7"</span> <span class="attr">points</span>=<span class="string">"2000,1620 0,1620 0,0 600,0 "</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<div id="vibrant"><br>        <svg viewbox="0 0 2880 1620" height="100%" preserveaspectratio="xMaxYMax slice"><br/>            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/><br/>        </svg><br></div>
+
+
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">

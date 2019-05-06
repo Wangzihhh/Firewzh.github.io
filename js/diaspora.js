@@ -20,7 +20,7 @@ var Diaspora = {
                 f(data);
                 xhrUrl = '';
             },
-            error: function(a, b, c) {
+            error: function(a, b, c) { 
                 if (b == 'abort') {
                     err && err()
                 } else {
