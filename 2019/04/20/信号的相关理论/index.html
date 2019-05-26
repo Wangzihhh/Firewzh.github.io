@@ -11,8 +11,7 @@
     <meta name="google" content="notranslate">
     <meta name="keywords" content="ZzuWild,"> 
     <meta name="description" content="WZH��s BLOG,关于对数字信号处理相关概念的解释
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-"> 
+一、采样我们知道自然界的信号的传播或产生伴随着大量随机噪声，而真正有用的信息往往隐藏在特定的信号中，如信号的频率。对模拟信号进行采样可以看作是一个模拟信号通过一个电,"> 
     <meta name="author" content="Zihao Wang"> 
     <link rel="alternative" href="atom.xml" title="看远方" type="application/atom+xml"> 
     <link rel="icon" href="/img/yezi.jpg"> 
@@ -39,18 +38,24 @@
     <div title="播放/暂停" class="icon-play"></div>
     <h3 class="subtitle">数字信号相关理论的物理意义</h3>
     <div class="social">
-        <!--<div class="like-icon">-->
-            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
-        <!--</div>-->
+        <div class="like-icon">
+            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">0</span></a>
+        </div>
+        <div>
+            
+        </div>
         <div>
             <div class="share">
                 <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
             </div>
             <div id="qr"></div>
         </div>
+        
     </div>
     <div class="scrollbar"></div>
 </div>
+
+
 
     <div class="section">
         <div class="article">
@@ -65,7 +70,34 @@
         </div>
         <div class="content markdown">
             <h3 id="关于对数字信号处理相关概念的解释"><a href="#关于对数字信号处理相关概念的解释" class="headerlink" title="关于对数字信号处理相关概念的解释"></a>关于对数字信号处理相关概念的解释</h3><hr>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<h4 id="一、采样"><a href="#一、采样" class="headerlink" title="一、采样"></a>一、采样</h4><p>我们知道自然界的信号的传播或产生伴随着大量随机噪声，而真正有用的信息往往隐藏在特定的信号中，如信号的频率。<br>对模拟信号进行采样可以看作是一个模拟信号通过一个电子开关S，该开关每隔T周期合上一次<br>，每次合上的时间为 <a href="https://www.codecogs.com/eqnedit.php?latex=\tau&space;<<&space;T" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tau&space;<<&space;T" title="\tau << T"></a>，当 <a href="https://www.codecogs.com/eqnedit.php?latex=\tau" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tau" title="\tau"></a><br>趋近于0 时，则形成理想采样。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<h4 id="二、通俗理解卷积的定义"><a href="#二、通俗理解卷积的定义" class="headerlink" title="二、通俗理解卷积的定义"></a>二、通俗理解卷积的定义</h4><p>  <a href="https://www.matongxue.com/madocs/32.html" target="_blank" rel="noopener">大神解答</a></p>
+<p>  <a href="https://www.zhihu.com/question/54677157/answer/141245297" target="_blank" rel="noopener">知乎分享</a>  </p>
+<p>卷积的历史<br>   <a href="https://pulse.embs.org/january-2015/history-convolution-operation/" target="_blank" rel="noopener">IEEE</a></p>
+<h3 id="三、自相关函数"><a href="#三、自相关函数" class="headerlink" title="三、自相关函数"></a>三、自相关函数</h3><p>1、概念</p>
+<pre><code>相关函数是描述信号X(s),Y(t)（这两个信号可以是随机的，也可以是确定的）在任意两个不同时刻s、t的取值之间的相关程度。两个信号之间的相似性大小用相关系数来衡量。定义：  
+</code></pre><p><img src="https://zzufire.github.io/img/3.1.png" alt="每一个奋斗的日子都不应辜负" title="啪！你死了！"></p>
+<p>称为变量 X 和 Y 的相关系数。若相关系数 = 0，则称 X与Y 不相关。相关系数越大，相关性越大，但肯定小于或者等于1.。相关函数分为自相关和互相关。下面一一介绍</p>
+<p>（1）、自相关函数</p>
+<pre><code>自相关函数是描述随机信号 x(t) 在任意不同时刻 t1,t2的取值之间的相关程度。定义式：  
+
+ ![每一个奋斗的日子都不应辜负](https://zzufire.github.io/img/3.2.png &apos;啪！你死了！&apos;)
+</code></pre><p>主要性质如下：</p>
+<p>（1）自相关函数为偶函数，其图形对称于纵轴。<br>（2）当s=t 时，自相关函数具有最大值，且等于信号的均方值，即<br>（3）周期信号的自相关函数仍为同频率的周期信号。</p>
+<p>（2）、互相关函数</p>
+<pre><code>自相关是互相关的一种特殊情况.。互相关函数是描述随机信号 x(t)、y(t) 在任意两个不同时刻s，t的取值之间的相关程度,其定义为：   
+</code></pre><p><img src="https://zzufire.github.io/img/3.3.png" alt="每一个奋斗的日子都不应辜负" title="啪！你死了！"></p>
+<p>对于连续函数，有定义： </p>
+<pre><code>![每一个奋斗的日子都不应辜负](https://zzufire.github.io/img/3.4.png &apos;啪！你死了！&apos;)
+</code></pre><p>对于离散的，有定义： </p>
+<pre><code>![每一个奋斗的日子都不应辜负](https://zzufire.github.io/img/3.5.png &apos;啪！你死了！&apos;)
+</code></pre><p>从定义式中可以看到，互相关函数和卷积运算类似，也是两个序列滑动相乘，但是区别在于：互相关的两个序列都不翻转，直接滑动相乘，求和；卷积的其中一个序列需要先翻转，然后滑动相乘，求和。所以，f(t)和g(t) 做相关等于 f*(-t) 与 g(t) 做卷积。</p>
+<pre><code>在图象处理中，自相关和互相关函数的定义如下：设原函数是f(t)，则自相关函数定义为 R(u)=f(t)*f(-t)，其中*表示卷积；设两个函数分别是f(t)和g(t)，则互相关函数定义为R(u)=f(t)*g(-t)，它反映的是两个函数在不同的相对位置上互相匹配的程度。
+</code></pre><p>2、物理意义</p>
+<pre><code>两个相关函数都是对相关性，即相似性的度量。如果进行归一化，会看的更清楚。
+</code></pre><p>自相关就是函数和函数本身的相关性，当函数中有周期性分量的时候，自相关函数的极大值能够很好的体现这种周期性。互相关就是两个函数之间的相似性，当两个函数都具有相同周期分量的时候，它的极大值同样能体现这种周期性的分量。</p>
+<pre><code>相关运算从线性空间的角度看其实是内积运算，而两个向量的内积在线性空间中表示一个向量向另一个向量的投影，表示两个向量的相似程度，所以相关运算就体现了这种相似程度。
+</code></pre><p>原文：<a href="https://blog.csdn.net/dengheCSDN/article/details/78848046" target="_blank" rel="noopener">https://blog.csdn.net/dengheCSDN/article/details/78848046</a> </p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
